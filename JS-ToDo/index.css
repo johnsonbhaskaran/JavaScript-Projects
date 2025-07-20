@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit&display=swap');
+
+* {
+  color-scheme: dark;
+  /* color-scheme: light; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Outfit, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 14px;
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-emphasis: '💜';
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+form textarea {
+  width: 100%;
+  resize: none;
+  min-height: 60px;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  outline: none;
+}
+
+form button {
+  padding: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 8em;
+  margin-left: auto;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+form button .arrw {
+  display: none;
+  transition: all ease-out 2s;
+}
+
+form button:hover .arrw {
+  display: inline-block;
+}
+
+form button:hover,
+form button:focus {
+  background: #fff;
+  color: black;
+  transition: 0.8s;
+}
+
+.todo-container {
+  margin-top: 14px;
+}
+
+.todo-container,
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todo {
+  padding: 14px;
+  background: lightslategrey;
+  border-radius: 4px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
+  gap: 6px;
+}
+
+.icon-btn {
+  padding: 0px 8px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.icon-btn:hover {
+  background: #222;
+}
