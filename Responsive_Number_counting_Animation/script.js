@@ -1,7 +1,7 @@
 console.log("Responsive Number Counting Animation");
 
 let valueDisplay = document.querySelectorAll(".num");
-let interval = 2000;
+let interval = 4000;
 
 valueDisplay.forEach((valueDisplay) => {
   let startValue = 0;
