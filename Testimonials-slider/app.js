@@ -73,13 +73,13 @@ nextBtn.addEventListener("click", () => {
 });
 
 // //* Click action for Surprise button
-// randomBtn.addEventListener("click", () => {
-//   let randomValue = randomIndex();
-//   console.log(randomValue);
+randomBtn.addEventListener("click", () => {
+  let randomValue = randomIndex();
+  console.log(randomValue);
 
-//   while (currentItem === randomValue) {
-//     randomValue = randomIndex();
-//   }
-//   currentItem = randomValue;
-//   updateInfo();
-// });
+  while (currentItem === randomValue) {
+    randomValue = randomIndex();
+  }
+  currentItem = randomValue;
+  updateInfo();
+});
