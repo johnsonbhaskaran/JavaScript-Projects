@@ -77,9 +77,12 @@ randomBtn.addEventListener("click", () => {
   let randomValue = randomIndex();
   console.log(randomValue);
 
-  while (currentItem === randomValue) {
-    randomValue = randomIndex();
-  }
-  currentItem = randomValue;
+  //using while loop
+  // while (currentItem === randomValue) {
+  //   randomValue = randomIndex();
+  // }
+
+  // using if logic
+  currentItem === randomValue ? currentItem++ : (currentItem = randomValue);
   updateInfo();
 });
