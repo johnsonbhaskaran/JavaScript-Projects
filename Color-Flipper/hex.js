@@ -8,11 +8,11 @@ const randomIndex = () => {
 };
 
 btnEl.addEventListener("click", () => {
-  let j = "#";
+  let hexColor = "#";
   for (let i = 0; i < 6; i++) {
     let random = randomIndex();
-    j += hex[random];
+    hexColor += hex[random];
   }
-  colorEl.textContent = j;
-  document.body.style.backgroundColor = j;
+  colorEl.textContent = hexColor;
+  document.body.style.backgroundColor = hexColor;
 });
