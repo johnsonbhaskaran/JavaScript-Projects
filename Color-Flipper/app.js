@@ -14,7 +14,7 @@ const bodyEl = document.body;
 // });
 
 btnEl.addEventListener("click", () => {
-  // * Get random number between 0 - 3 colors[]
-  const random = Math.floor(Math.random() * 4);
+  // * Get random number between 0 - 3
+  const random = Math.floor(Math.random() * colors.length);
   bodyEl.style.backgroundColor = colors[random];
 });
