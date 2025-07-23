@@ -10,8 +10,7 @@ const randomIndex = () => {
 btnEl.addEventListener("click", () => {
   let hexColor = "#";
   for (let i = 0; i < 6; i++) {
-    let random = randomIndex();
-    hexColor += hex[random];
+    hexColor += hex[randomIndex()];
   }
   colorEl.textContent = hexColor;
   document.body.style.backgroundColor = hexColor;
