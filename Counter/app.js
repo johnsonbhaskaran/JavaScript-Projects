@@ -7,9 +7,9 @@ const btns = document.querySelectorAll(".btn");
 
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    if (e.currentTarget.classList[1] === "decrease") {
+    if (e.currentTarget.classList.contains("decrease")) {
       count--;
-    } else if (e.currentTarget.classList[1] === "increase") {
+    } else if (e.currentTarget.classList.contains("increase")) {
       count++;
     } else count = 0;
 
