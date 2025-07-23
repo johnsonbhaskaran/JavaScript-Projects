@@ -29,3 +29,57 @@ const reviews = [
     text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
+
+// select items
+const img = document.getElementById("person-img");
+const author = document.getElementById("author");
+const job = document.getElementById("job");
+const info = document.getElementById("info");
+
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const randomBtn = document.querySelector(".random-btn");
+
+//* Generate Random number function
+const randomIndex = () => Math.floor(Math.random() * reviews.length);
+
+// set starting item
+let currentItem = 0;
+
+//* load initial item
+window.addEventListener("DOMContentLoaded", () => {
+  updateInfo();
+});
+
+//* Information update function - updateInfo()
+const updateInfo = () => {
+  const item = reviews[currentItem];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+};
+
+//* Click action for Prev button
+prevBtn.addEventListener("click", () => {
+  currentItem === 0 ? (currentItem = 3) : currentItem--;
+  updateInfo();
+});
+
+//* Click action for Next button
+nextBtn.addEventListener("click", () => {
+  currentItem === 3 ? (currentItem = 0) : currentItem++;
+  updateInfo();
+});
+
+// //* Click action for Surprise button
+// randomBtn.addEventListener("click", () => {
+//   let randomValue = randomIndex();
+//   console.log(randomValue);
+
+//   while (currentItem === randomValue) {
+//     randomValue = randomIndex();
+//   }
+//   currentItem = randomValue;
+//   updateInfo();
+// });
