@@ -225,7 +225,7 @@ nav {
   display: none;
 }
 
-.links.active {
+.links {
   height: 0;
   overflow: hidden;
   transition: var(--transition);

@@ -10,7 +10,7 @@ const linksClass = document.querySelector(".links");
 // console.log(toggleButton);
 
 toggleButton.addEventListener("click", () => {
-  linksClass.classList.contains("active")
-    ? linksClass.classList.remove("active")
-    : linksClass.classList.add("active");
+  linksClass.classList.contains("show-links")
+    ? linksClass.classList.remove("show-links")
+    : linksClass.classList.add("show-links");
 });
