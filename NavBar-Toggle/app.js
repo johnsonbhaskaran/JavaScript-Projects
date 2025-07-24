@@ -10,7 +10,5 @@ const linksClass = document.querySelector(".links");
 // console.log(toggleButton);
 
 toggleButton.addEventListener("click", () => {
-  linksClass.classList.contains("show-links")
-    ? linksClass.classList.remove("show-links")
-    : linksClass.classList.add("show-links");
+  linksClass.classList.toggle("show-links");
 });
