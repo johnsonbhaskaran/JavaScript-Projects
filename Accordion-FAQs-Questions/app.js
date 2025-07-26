@@ -1,14 +1,14 @@
 //using selectors inside the element
 
-const questions = document.querySelectorAll(".question");
+// const questions = document.querySelectorAll(".question");
 
-questions.forEach((question) => {
-  const btn = question.querySelector(".question-btn");
+// questions.forEach((question) => {
+//   const btn = question.querySelector(".question-btn");
 
-  btn.addEventListener("click", () => {
-    question.classList.toggle("show-text");
-  });
-});
+//   btn.addEventListener("click", () => {
+//     question.classList.toggle("show-text");
+//   });
+// });
 
 // traversing the dom
 
@@ -22,3 +22,19 @@ questions.forEach((question) => {
 //     question.classList.toggle("show-text");
 //   });
 // });
+
+//using selectors inside the element to acheive one selction at a time others are closed
+
+const questions = document.querySelectorAll(".question");
+
+questions.forEach((question) => {
+  const btn = question.querySelector(".question-btn");
+
+  btn.addEventListener("click", () => {
+    questions.forEach((item) => {
+      if (item !== question) item.classList.remove("show-text");
+    });
+
+    question.classList.toggle("show-text");
+  });
+});
