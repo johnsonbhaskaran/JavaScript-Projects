@@ -1,23 +1,13 @@
 //using selectors inside the element
 // traversing the dom
 
-const questions = document.querySelectorAll(".question");
-// const plusIcon = document.querySelector(".plus-icon");
-// const minusIcon = document.querySelector(".minus-icon");
+const questions = document.querySelectorAll(".questions");
+const QBtns = document.querySelectorAll(".question-btn");
 
-questions.forEach((question) => {
-  question.addEventListener("click", (e) => {
-    let plusIcon = e.currentTarget.querySelector(".plus-icon");
-    let minusIcon = e.currentTarget.querySelector(".minus-icon");
+QBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const question = e.currentTarget.parentNode.parentNode;
 
-    plusIcon.addEventListener("click", (e) => {
-      e.currentTarget.parentNode.parentNode.parentNode.parentNode.classList.add("show-text");
-      console.log(e.currentTarget);
-    });
-
-    minusIcon.addEventListener("click", (e) => {
-      e.currentTarget.parentNode.parentNode.parentNode.parentNode.classList.remove("show-text");
-      console.log(e.currentTarget);
-    });
+    question.classList.toggle("show-text");
   });
 });
