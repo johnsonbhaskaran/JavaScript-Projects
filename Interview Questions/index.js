@@ -207,3 +207,33 @@ console.log("8" == 8); // true
 //* Eg: React and Redux - Implements pattern
 //* Single source of truth
 //* changes to the data can - Only flow in one direction
+
+/* -----------------------------------------------------------------/
+                    * 11. Recursion - Fibonacci series *
+/------------------------------------------------------------------*/
+
+//* Recursion is calling the function inside the function
+
+//* The current value is the addition of the previous two values
+//? 0 1 1 2 3 5 8 13
+
+function fib(num) {
+  if (num === 1) return 0;
+  if (num === 2) return 1;
+
+  return fib(num - 1) + fib(num - 2);
+  //! Lets take fib(5)
+  //!   breaks down to fib(4)                  |    + fib(3)
+  //!   breaks down to fib(3) + fib(2) => 1   | fib(2) => 1  + fib(1) => 0
+  //!   breaks down to fib(2) => 1 + fib(1) => 0
+  //!   ADDs up to 1 + 1 + 1 => 3 (ans)
+}
+
+fib(1);
+fib(2);
+fib(3);
+fib(4);
+fib(5);
+fib(6);
+fib(7);
+fib(8);
