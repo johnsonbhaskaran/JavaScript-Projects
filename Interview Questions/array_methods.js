@@ -54,11 +54,17 @@ array1;
 /------------------------------------------------------------------*/
 
 //* sorts the array
-//* default is alphabetical
-//* customize order by -> defining expression (a-b) Ascending sort
+//! default is ALPHABETICALLY
+//* when sorting numbers -> customize order by -> defining expression (a-b) Ascending sort
 
 array2.reverse();
 array2.sort();
+
+const numArr = [2, 1, 5, 5, 4, 12, 8];
+
+numArr.sort();
+numArr.sort((a, b) => a - b);
+numArr.sort((a, b) => b - a);
 
 /* -----------------------------------------------------------------/
                     * 5. reverse() *
@@ -73,8 +79,15 @@ array1.reverse();
 /------------------------------------------------------------------*/
 
 //* Iterates over each item
+//* takes function with two arguments
+//* 1st -> array item
+//* 2nd -> array index
 
-array1.forEach((item) => "nothing");
+array1;
+array1.forEach((item, index) => console.log(item, index));
+array1.forEach((item) => console.log(item));
+array1.forEach((item) => console.log(item + 1));
+array1;
 
 /* -----------------------------------------------------------------/
                     * 7. map() *
@@ -102,7 +115,19 @@ array1;
 /------------------------------------------------------------------*/
 
 //* Joins together items in the array
-//? returns new modified array
+//? returns new array with joined items
+//* just join() -> no arguments -> joins items with comma (,)
+//* join("") -> empty string as arg -> joins items without any space
+//* join(" ") -> string with space as arg -> joins items with space
+//* join("*") -> string with star as arg -> joins items with star
+
+const joinArr = array1.join();
+joinArr;
+console.log(joinArr);
+const joinArr2 = array1.join("");
+joinArr2;
+const joinArr3 = array1.join(" * ");
+joinArr3;
 
 const joinArrItems = array1.join(array2);
 joinArrItems;
@@ -127,7 +152,7 @@ array2;
 
 //* used to slice arrays
 //? creates new copy
-//* choose beginning and ending cut off points
+//* choose beginning and ending cut off points - two arguments
 //* 1st number included
 //* 2nd doesn't include
 //! if string -> returns string
@@ -146,6 +171,7 @@ str.slice(1, 5); // ello
 //* 1st number is starting item
 //* 2nd number is how many to delete/replace
 //* 3rd number is what to insert
+//? returns spliced items
 
 array1;
 array1.splice(2, 1);
