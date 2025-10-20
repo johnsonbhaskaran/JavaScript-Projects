@@ -3,3 +3,55 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  width: 420px;
+  height: 60px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+  outline: none;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  caret-color: salmon;
+  color: salmon;
+}
+
+.form-group button {
+  margin-left: 10px;
+  width: 100px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+}
+
+.form-group button:hover {
+  background-color: aqua;
+  color: #333;
+}
+
+#evaluate {
+  background-color: salmon;
+  border: none;
+  border-radius: 5px;
+  transition: none;
+}
+
+#evaluate:hover {
+  background-color: rgb(245, 156, 147);
+}
