@@ -11,6 +11,36 @@
 
 <body>
 
+  <form class="calculator">
+    <div class="form-group">
+      <input type="text">
+    </div>
+    <div class="form-group">
+      <button onclick="addToInput('%')" type="button">%</button><button onclick="clearInput()"
+        type="button">C</button><button onclick="backspace()" type="button">⌫</button><button onclick="addToInput('/')"
+        type="button">/</button>
+    </div>
+    <div class="form-group">
+      <button onclick="addToInput('1')" type="button">1</button><button onclick="addToInput('2')"
+        type="button">2</button><button onclick="addToInput('3')" type="button">3</button><button
+        onclick="addToInput('+')" type="button">+</button>
+    </div>
+    <div class="form-group">
+      <button onclick="addToInput('4')" type="button">4</button><button onclick="addToInput('5')"
+        type="button">5</button><button onclick="addToInput('6')" type="button">6</button><button
+        onclick="addToInput('-')" type="button">-</button>
+    </div>
+    <div class="form-group">
+      <button onclick="addToInput('7')" type="button">7</button><button onclick="addToInput('8')"
+        type="button">8</button><button onclick="addToInput('9')" type="button">9</button><button
+        onclick="addToInput('*')" type="button">*</button>
+    </div>
+    <div class="form-group">
+      <button onclick="addToInput('00')" type="button">00</button><button onclick="addToInput('0')"
+        type="button">0</button><button onclick="addToInput('.')" type="button">.</button><button
+        onclick="evaluateVal()" type="button" id="evaluate">=</button>
+    </div>
+  </form>
 
   <script src="./index.js"></script>
 </body>
