@@ -65,3 +65,18 @@ async function processSequentially() {
 }
 
 processSequentially();
+
+/* -----------------------------------------------------------------/
+                    * await - Parallel execution with Promise.all *
+/------------------------------------------------------------------*/
+
+async function mapParallelExecPromAll() {
+  const promises = userIds.map((id) =>
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((res) => res.json())
+  );
+
+  const userData = await Promise.all(promises);
+  console.log("All results:", userData);
+}
+
+mapParallelExecPromAll();
