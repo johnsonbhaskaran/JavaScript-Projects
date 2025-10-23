@@ -46,3 +46,22 @@ async function getAllUserData() {
 }
 
 getAllUserData();
+
+/* -----------------------------------------------------------------/
+                    * await - sequential execution - for of *
+/------------------------------------------------------------------*/
+
+//? best method - BUT
+
+async function processSequentially() {
+  for (const id of userIds) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const data = await response.json();
+
+    console.log(`User ${id}:`, data.name);
+  }
+
+  console.log("All done fetching users");
+}
+
+processSequentially();
