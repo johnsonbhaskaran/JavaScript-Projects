@@ -80,3 +80,27 @@ async function mapParallelExecPromAll() {
 }
 
 mapParallelExecPromAll();
+
+/* -----------------------------------------------------------------/
+                    * await - Promise.allSettled *
+/------------------------------------------------------------------*/
+
+// Resilient parallel operation with Promise.allSettled
+
+async function fetchAllSources() {
+  const allSources = [
+    "https://pokeapi.co/api/v2/pokemon/2",
+    "https://jsonplaceholder.typicode.com/users/2",
+  ];
+
+  const promises = allSources.map((url) => fetch(url).then((res) => res.json()));
+
+  const results = await Promise.allSettled(promises);
+
+  results.forEach((result, index) => {
+    if (result.status === "fulfilled") console.log(`Source ${index} succeeded:`, result.value);
+    console.error(`Source ${index} failed:`, result.reason);
+  });
+}
+
+fetchAllSources();
