@@ -31,3 +31,18 @@ async function mapAllUserData() {
 }
 
 mapAllUserData();
+
+/* -----------------------------------------------------------------/
+                    * await - Using Map but with Promises.all *
+/------------------------------------------------------------------*/
+
+async function getAllUserData() {
+  const userData = await Promise.all(
+    userIds.map((id) => fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((res) => res.json()))
+  );
+
+  console.log(userData);
+  console.log(userData.map((data) => console.log(`User ${data.id}:`, data.name)));
+}
+
+getAllUserData();
