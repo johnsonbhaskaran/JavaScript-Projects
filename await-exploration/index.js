@@ -16,3 +16,18 @@ async function fetchUserProfiles() {
 }
 
 fetchUserProfiles();
+
+/* -----------------------------------------------------------------/
+                    * await - Using Map *
+/------------------------------------------------------------------*/
+
+async function mapAllUserData() {
+  const userData = await userIds.map(async (id) => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    return response.json();
+  });
+
+  console.log(await userData);
+}
+
+mapAllUserData();
